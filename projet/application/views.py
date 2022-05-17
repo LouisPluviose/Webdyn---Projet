@@ -31,7 +31,7 @@ def traitement(request):
     lform = AvionForm(request.POST)
     if lform.is_valid():
         avion = lform.save()
-        return HttpResponseRedirect("/application/affiche")
+        return HttpResponseRedirect("/application/index")
     else:
         return render(request,"application/ajout.html",{"form": lform})
 
