@@ -1,0 +1,165 @@
+{% load static %}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    width: 100%;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: grey;
+}
+
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+/* SCROLLBAR */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000;
+  box-shadow: inset 0 0 5px #000000;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 10px;
+}
+/* HEADER */
+
+.header {
+    max-width: 100%;
+    height: auto;
+    left: 0px;
+    right: 0px;
+    font-size: 40px;
+    padding-bottom: 0px;
+}
+
+.photorafale {
+    width: 100%;
+    height: auto;
+    left: 0px;
+    right: 0px;
+}
+
+h1 {
+    position: absolute;
+    width: 50%;
+    color: white;
+    top: 40%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+}
+
+h3 {
+    width: 70%;
+    color: white;
+    position: absolute;
+    top: 55%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+}
+
+/* NAVBAR */
+
+.navbar {
+  width: 100%;
+  diplay: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.liens {
+  float: left;
+}
+
+.liens p {
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+.liens a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 150px;
+  text-decoration: none;
+}
+
+.liens a:visited {
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+.liens p:hover {
+  background-color: #111;
+}
+
+/* Formulaire */
+
+form {
+    padding-left: 1%;
+    padding-top: 1%;
+}
+
+.paragrapheajout {
+    padding-top: 1%;
+    padding-left: 1.25%;
+    font-size: 25px;
+}
+
+/* TEXT */
+
+.textepresentation {
+    font-size: 25px;
+    padding-top: 1%;
+    padding-left: 1.25%;
+}
+
+/* HR */
+
+hr.rounded {
+  border-top: 8px solid #bbb;
+  border-radius: 5px;
+}
+
+/* CATALOGUE */
+
+ol {
+    font-size: 25px;
+}
+
+/* FOOTER */
+
+.footer {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: center;
+}

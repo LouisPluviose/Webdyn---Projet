@@ -1,0 +1,14 @@
+{% extends "application/main.html" %}
+
+{% block content %}
+<form class="form-horizontal" method="post" action="/application/traitement/">
+{% csrf_token %}
+<fieldset>
+<legend>Ajout</legend>
+  <ul>
+    {{form.as_ul}}
+  </ul>
+  <input type="submit" value="envoyer les données"/>
+</fieldset>
+</form>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="textepresentation">
+<p>Entrez sur le formulaire suivant l'id du poste que vous souhaitez éditer</p>
+</div>
+
+<form method="post" action="/application/update/id_id">
+{% csrf_token %}
+  <fieldset>
+    <legend>Edition</legend>
+    <label for="id_id">Id : <input type="number" name="id" required id="id_id"></label>
+    <input type="submit" value="Envoyer les données">
+  </fieldset>
+</form>
+
+{% endblock %}

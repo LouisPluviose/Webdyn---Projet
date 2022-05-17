@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@340&display=swap" rel="stylesheet">
+    <title>Wikiplane</title>
+</head>
+<body>
+
+    <div class="header">
+            <img class="photorafale" src="{% static 'images/rafale.jpg' %}" alt="Photo Rafale NG">
+            <h1 id="top1">Wikiplane</h1>
+            <h3 id="top2">Votre catalogue web de l'aviation</h3>
+    </div>
+
+    <ul class="navbar">
+        <li class="liens"><a href="">Ajout</a></li>
+        <li class="liens"><p>Liens</p></li>
+        <li class="liens"><p>Liens</p></li>
+        <li class="liens"><p>Liens</p></li>
+    </ul>
+
+    {% block content %}
+
+    {% endblock %}
+
+    <footer class="footer">
+        Site web fait par Louis PLUVIOSE - RT13 | Django / HTML5 / CSS3 / JS
+    </footer>
+</body>
+</html>

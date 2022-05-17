@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="textepresentation">
+<p>Bienvenue sur le site web "Wikiplane".</p>
+<p>Vous retrouverez un catalogue d'avion ainsi qu'une page d'ajout, de modification et de supression</p>
+<p>Bonne visite !</p>
+
+<hr class="rounded">
+
+<p>Utilisez la barre de navigation pour accéder aux différentes pages</p>
+
+<hr class="rounded">
+
+<p>Catalogue du site : </p>
+
+</div>
+
+<ol>
+    {% for l in liste %}
+        <li> {{l}} <a href="/application/affiche/{{l.id}}"> | Détails </a><a href="/application/update/{{l.id}}"> | Update </a><a href="/application/delete/{{l.id}}"> | Delete</a></li>
+    {% endfor %}
+</ol>
+
+{% endblock %}
