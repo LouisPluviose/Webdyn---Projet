@@ -69,7 +69,7 @@ def pageupdate(request):
 def delete(request, id):
     avion = models.Avion.objects.get(pk=id)
     avion.delete()
-    return HttpResponseRedirect("/application/")
+    return HttpResponseRedirect("/application/index/")
 
 
 def update(request, id):
