@@ -2,6 +2,34 @@
 
 {% block content %}
 
-<p>Vous avez ajouté l'avion suivant : {{avion}}</p>
+<p>Details sur l'avion {{avion.nom}}</p>
+
+<style type="text/css">
+
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0lax">Catégorie</th>
+    <th class="tg-0lax">Valeur</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax">Catégorie</td>
+    <td class="tg-0lax">{{avion.categorie}}</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Date de production</td>
+    <td class="tg-0lax">{{avion.date_production}}</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Nombre d'appareils</td>
+    <td class="tg-0lax">{{avion.nombre_appareils}}</td>
+  </tr>
+</tbody>
+</table>
+
+{{avion.presentation}}
 
 {% endblock %}
