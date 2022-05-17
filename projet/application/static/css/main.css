@@ -83,7 +83,7 @@ h3 {
 
 .navbar {
   width: 100%;
-  diplay: flex;
+  display: flex;
   justify-content: space-around;
   list-style-type: none;
   margin: 0;
