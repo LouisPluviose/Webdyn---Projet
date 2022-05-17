@@ -6,10 +6,10 @@ from . import models
 class AvionForm(ModelForm):
     class Meta:
         model = models.Avion
-        fields = {'nom', 'type', 'date_production', 'nombre_appareils', 'presentation', 'categorie'}
+        fields = {'nom', 'constructeur', 'date_production', 'nombre_appareils', 'presentation', 'categorie'}
         labels = {
             'nom': _('Nom'),
-            'type': _('Type'),
+            'constructeur': _('Constructeur'),
             'date_production': _('Date de production'),
             'nombre_appareils': _('Nombre appareils'),
             'presentation': _('Présentation'),

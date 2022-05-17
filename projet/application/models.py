@@ -5,14 +5,14 @@ from django.db import models
 
 class Avion(models.Model):
     nom = models.CharField(max_length=100)
-    type = models.CharField(max_length=100)
+    constructeur = models.CharField(max_length=100)
     date_production = models.DateField(blank=True, null=True)
     nombre_appareils = models.IntegerField(blank=False)
     presentation = models.TextField(null=True, blank=True)
     categorie = models.ForeignKey("categorie", on_delete=models.CASCADE, default=None)
 
     def __str__(self):
-        chaine = f"id : {self.id} | {self.nom} est un {self.type}, créé en {self.date_production} à auteur de {self.nombre_appareils} appareils. \n Présentation : {self.presentation}"
+        chaine = f"{self.nom} de {self.constructeur} créé en {self.date_production}"
         return chaine
 
     def dico(self):
