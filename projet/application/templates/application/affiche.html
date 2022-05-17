@@ -2,11 +2,8 @@
 
 {% block content %}
 
-<p>Details sur l'avion {{avion.nom}}</p>
+<p class="titreaffiche">Details sur l'avion {{avion.nom}}</p>
 
-<style type="text/css">
-
-</style>
 <table class="tg">
 <thead>
   <tr>
@@ -30,6 +27,6 @@
 </tbody>
 </table>
 
-{{avion.presentation}}
+<p class="presentationaffiche">{{avion.presentation}}</p>
 
 {% endblock %}

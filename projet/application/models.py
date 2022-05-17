@@ -16,7 +16,7 @@ class Avion(models.Model):
         return chaine
 
     def dico(self):
-        return {"nom" : self.nom, "type" : self.type, "date_production" : self.date_production, "nombre_appareils" : self.nombre_appareils, "presentation" : self.presentation, "categorie" : self.categorie}
+        return {"nom" : self.nom, "constructeur" : self.constructeur, "date_production" : self.date_production, "nombre_appareils" : self.nombre_appareils, "presentation" : self.presentation, "categorie" : self.categorie}
 
 
 class Categorie(models.Model):
