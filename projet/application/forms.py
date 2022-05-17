@@ -22,6 +22,6 @@ class CategorieForm(ModelForm):
         model = models.Categorie
         fields = {'nomc', 'usage'}
         labels = {
-            'nomc': _('Nomc'),
-            'usage': _('Usage'),
+            'nomc': _('Nom de la catégorie'),
+            'usage': _('Usage de la catégorie'),
         }

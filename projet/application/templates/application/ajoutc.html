@@ -3,9 +3,21 @@
 {% block content %}
 <form class="form-horizontal" method="post" action="/application/traitementc/">
 {% csrf_token %}
+<fieldset>
+<legend>Ajout d'une catégorie</legend>
   <ul>
     {{form.as_ul}}
   </ul>
   <input type="submit" value="envoyer les données"/>
+</fieldset>
 </form>
+
+<p class="presentationaffiche">Catégories déjà présentent : </p>
+
+<ol>
+    {% for l in listec %}
+        <li> {{l}} </li>
+    {% endfor %}
+</ol>
+
 {% endblock %}

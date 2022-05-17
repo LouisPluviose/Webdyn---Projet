@@ -93,16 +93,17 @@ def traitementupdate(request, id):
 
 
 def ajoutc(request):
+    listec = list(models.Categorie.objects.all())
     if request.GET.get("POST"):
         form = CategorieForm(request)
         if form.is_valid():
             livre = form.save()
             return HttpResponseRedirect("/application/")
         else:
-            return render(request,"application/ajoutc.html",{"form": form})
+            return render(request,"application/ajoutc.html",{"form": form, 'listec': listec})
     else :
         form = CategorieForm()
-        return render(request,"application/ajoutc.html",{"form" : form})
+        return render(request,"application/ajoutc.html",{"form": form, 'listec': listec})
 
 
 def traitementc(request):
