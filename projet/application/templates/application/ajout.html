@@ -1,7 +1,7 @@
 {% extends "application/main.html" %}
 
 {% block content %}
-<form class="form-horizontal" method="post" action="/application/traitement/">
+<form class="form-horizontal" method="post" action="/application/traitement/{{id}}/">
 {% csrf_token %}
 <fieldset>
 <legend>Ajout</legend>

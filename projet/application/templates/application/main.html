@@ -1,8 +1,8 @@
-{% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,10 +19,9 @@
     </div>
 
     <ul class="navbar">
-        <li class="liens"><a href="application/index/">Home</a></li>
-        <li class="liens"><a>Ajout</a></li>
-        <li class="liens"><a href="application/ajoutc/">Ajout catégorie</a></li>
-        <li class="liens"><p>Crédits</p></li>
+        <li class="liens"><a href="{% url 'application:index' %}">Home</a></li>
+        <li class="liens"><a href="{% url 'application:ajout' %}">Ajout</a></li>
+        <li class="liens"><a href="{% url 'application:ajoutc' %}">Ajout d'une catégorie</a></li>
     </ul>
 
     {% block content %}

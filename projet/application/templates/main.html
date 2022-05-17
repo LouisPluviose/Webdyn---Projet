@@ -20,10 +20,9 @@
     </div>
 
     <ul class="navbar">
-        <li class="liens"><p><a href="{% url 'application:index' %}">Home</a></p></li>
-        <li class="liens"><p><a href="{% url 'application:ajout' %}">Ajout</a></p></li>
-        <li class="liens"><p><a href="{% url 'application:pageedit' %}">Modification</a></p></li>
-        <li class="liens"><p><a href="{% url 'application:pagedelete' %}">Suppression</a></p></li>
+        <li class="liens"><a href="{% url 'application:index' %}">Home</a></li>
+        <li class="liens"><a href="{% url 'application:ajout' %}">Ajout</a></li>
+        <li class="liens"><a href="{% url 'application:ajoutc' %}">Ajout d'une catégorie</a></li>
     </ul>
 
     {% block content %}
