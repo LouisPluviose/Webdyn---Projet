@@ -107,8 +107,8 @@ def deletec(request, id):
 
 def updatec(request, id):
     categorie = models.Categorie.objects.get(pk=id)
-    lform = CategorieForm(categorie.dico())
-    return render(request, "application/updatec.html", {"form": lform, "id": id})
+    cform = CategorieForm(categorie.dico())
+    return render(request, "application/updatec.html", {"form": cform, "id": id})
 
 
 def traitementupdatec(request, id):
