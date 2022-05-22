@@ -46,26 +46,6 @@ def affiche(request, id):
     return render(request,"application/affiche.html",{"avion" : avion})
 
 
-def pageedit(request):
-    return render(request, "application/pageedit.html")
-
-
-def pagedelete(request):
-    return render(request, "application/pagedelete.html")
-
-
-def pageupdate(request):
-    if request.GET.get("POST"):
-        form = AvionForm(request)
-        if form.is_valid():
-            return HttpResponseRedirect("/application/update/", {"id" : id})
-        else:
-            return render(request, "application/pageupdate.html", {"form": form})
-    else:
-        form = AvionForm()
-        return render(request, "application/pageupdate.html", {"form": form})
-
-
 def delete(request, id):
     avion = models.Avion.objects.get(pk=id)
     avion.delete()
@@ -78,7 +58,7 @@ def update(request, id):
     return render(request, "application/update.html", {"form": lform, "id": id})
 
 
-def traitementupdate(request, id):
+def updatetraitment(request, id):
     lform = AvionForm(request.POST)
     if lform.is_valid():
         avion = lform.save(commit=False)
@@ -90,6 +70,10 @@ def traitementupdate(request, id):
 
 
 ################################################################
+
+def affichec(request, id):
+    categorie = models.Categorie.objects.get(pk=id)
+    return render(request,"application/affichec.html",{"categorie" : categorie})
 
 
 def ajoutc(request):
@@ -119,3 +103,20 @@ def deletec(request, id):
     avion = models.Categorie.objects.get(pk=id)
     avion.delete()
     return HttpResponseRedirect("/application/index/")
+
+
+def updatec(request, id):
+    categorie = models.Categorie.objects.get(pk=id)
+    lform = CategorieForm(categorie.dico())
+    return render(request, "application/updatec.html", {"form": lform, "id": id})
+
+
+def traitementupdatec(request, id):
+    lform = CategorieForm(request.POST)
+    if lform.is_valid():
+        categorie = lform.save(commit=False)
+        categorie.id = id
+        categorie.save()
+        return HttpResponseRedirect("/application/index")
+    else:
+        return render(request, "application/updatec.html", {"form": lform, "id": id})

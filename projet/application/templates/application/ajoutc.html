@@ -12,11 +12,11 @@
 </fieldset>
 </form>
 
-<p class="presentationaffiche">Catégories déjà présentes : </p>
+<p class="presentationaffiche">Catégories déjà présente : </p>
 
 <ol>
     {% for l in listec %}
-        <li> {{l}} </li>
+        <li> {{l}} <a href="/application/affichec/{{l.id}}"> | Détails </a><a href="/application/updatec/{{l.id}}"> | Update </a><a href="/application/deletec/{{l.id}}"> | Delete</a></li>
     {% endfor %}
 </ol>
 

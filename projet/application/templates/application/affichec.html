@@ -2,6 +2,8 @@
 
 {% block content %}
 
-<p>Vous avez ajouté l'avion suivant : {{categorie}}</p>
+<p class="titreaffiche">Details sur l'avion : {{categorie.nomc}}</p>
+
+<p class="presentationaffiche">{{categorie.nomc}} et {{categorie.usage}}</p>
 
 {% endblock %}

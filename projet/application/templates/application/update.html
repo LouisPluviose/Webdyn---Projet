@@ -1,11 +1,15 @@
 {% extends 'main.html' %}
 
 {% block content %}
-
-<form method="post" action="/bibliotheque/traitementupdate/{{avion.id}}">
-    {% csrf_token %}
-    {{ form.as_ul }}
-<input type="submit" value="envoyer␣les␣données"\>
-</form>
+  <form method="post" action="/application/updatetraitment/{{id}}">
+  {% csrf_token %}
+  <fieldset>
+  <legend>Modification de l'avion {{avion.nom}}</legend>
+    <ul>
+      {{form.as_ul}}
+    </ul>
+    <input type="submit" value="envoyer les données"/>
+  </fieldset>
+  </form>
 
 {% endblock %}

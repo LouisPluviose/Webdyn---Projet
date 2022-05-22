@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<form method="post" action="/bibliotheque/traitementupdate/{{avion.id}}">
+<form method="post" action="/application/traitementupdate/{{avion.id}}">
     {% csrf_token %}
     {{ form.as_ul }}
 <input type="submit" value="envoyer␣les␣données"\>
