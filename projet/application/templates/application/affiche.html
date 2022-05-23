@@ -2,7 +2,9 @@
 
 {% block content %}
 
-<p class="titreaffiche">Details sur l'avion {{avion.nom}}</p>
+<p class="titreaffiche">Details sur l'avion : {{avion.nom}}</p>
+
+<p class="presentationaffiche">Fiche technique brève de l'avion : {{avion.nom}}</p>
 
 <table class="tg">
 <thead>
@@ -26,6 +28,8 @@
   </tr>
 </tbody>
 </table>
+
+<p class="presentationaffiche">Présentation de l'avion : {{avion.nom}}</p>
 
 <p class="presentationaffiche">{{avion.presentation}}</p>
 

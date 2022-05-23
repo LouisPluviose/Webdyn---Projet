@@ -64,7 +64,7 @@ def updatetraitment(request, id):
         avion = lform.save(commit=False)
         avion.id = id
         avion.save()
-        return HttpResponseRedirect("/application/")
+        return HttpResponseRedirect("/application/index/")
     else:
         return render(request, "application/update.html", {"form": lform, "id": id})
 
